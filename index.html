@@ -4,80 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Delights - Online Cake Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background: #fff8f0;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff69b4; /* Hot Pink */
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .header-search input {
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        /* Banner */
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Welcome and Testimonials Sections */
+        .welcome {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff0f5; /* Lighter Pink */
+        }
+
+        .welcome h2 {
+            margin-bottom: 10px;
+            color: #d63384; /* Darker Pink */
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 20px;
+            background-color: #ffe4e1; /* Misty Rose */
+        }
+
+        .gallery-item {
+            width: 250px;
+            height: 250px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            opacity: 0.95;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        /* Muffin Section Image Overrides */
+        .welcome img[alt="Muffins"] {
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            display: block; /* Ensure it's treated as a block for margin: auto to work */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 40px 20px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+
+        .row img {
+            width: 45%; /* Adjusted for better layout with text */
+            height: auto;
+            max-width: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .row .text {
+            width: 50%;
+            padding: 20px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Responsive Adjustments for Content Rows */
+        @media (max-width: 768px) {
+            .row, .row.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            .row img, .row .text {
+                width: 90%;
+                margin: 10px auto;
+                padding: 10px 0;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
-        <div class="header-title">Sweet Delights</div>
+        <div class="header-title">Sweet Delights 🎂</div>
         <div class="header-search">
             <input type="text" placeholder="Search cakes...">
         </div>
     </header>
 
-    <!-- Banner Image -->
     <section class="banner">
-        <img src="https://www.shutterstock.com/image-photo/birthday-cake-candlescover-banner-conceptdifferent-600nw-2212456441.jpg" height="300" width="1500" alt="Cake Banner">
+        <img src="ChatGPT Image Aug 5, 2025, 11_30_28 AM.png" alt="Cake Banner">
     </section>
 
-    <!-- Welcome Section -->
     <section class="welcome">
         <h2>Welcome to Sweet Delights!</h2>
-        <p>Your one-stop destination for delicious, handmade cakes for every occasion. Whether it's a birthday, anniversary, or just a sweet craving, we have a cake for you!</p>
+        <p>Your one-stop destination for delicious, handmade cakes for every occasion. Whether it's a **birthday, anniversary**, or just a sweet craving, we have a cake for you!</p>
     </section>
 
-    <!-- Image Gallery -->
     <section class="gallery">
         <div class="gallery-item">
-            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/easy_chocolate_cake_31070_16x9.jpg" height="300" width="350" alt="Chocolate Cake">
+            <img src="images.jpeg" alt="Chocolate Cake">
             <div class="caption">Chocolate Cake</div>
         </div>
         <div class="gallery-item">
-            <img src="https://www.southernliving.com/thmb/EGa50Z24TBoC_avMfeM-gj7cL-8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/StrawBerry-Delight_beauty_007-9147cb61b9604459956f16dfad4c6da2.jpg" height="300" width="350" alt="Strawberry Delight">
+            <img src="StrawBerry-Delight_beauty_007-9147cb61b9604459956f16dfad4c6da2.jpg" alt="Strawberry Delight">
             <div class="caption">Strawberry Delight</div>
         </div>
         <div class="gallery-item">
-            <img src="https://assets.tmecosys.cn/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/e5f2ceaf-5530-46e8-908e-ea9586a03bf9/Derivates/e7f68f7a-23c5-4803-a26e-b9d23aa8802f.jpg" height="300" width="350" alt="Red Velvet">
+            <img src="Red_Velvet_Cake_Waldorf_Astoria.jpg" alt="Red Velvet">
             <div class="caption">Red Velvet</div>
         </div>
     </section>
 
-    <!-- Muffin Section -->
     <section class="welcome">
-        <h2>Freshly Baked Muffins</h2>
+        <h2>Freshly Baked Muffins 🧁</h2>
         <p>We also offer a range of freshly baked muffins – perfect for your tea time or breakfast. Choose from blueberry, banana, choco-chip, and more!</p>
-        <img src="KABC_Quick-Breads_Blueberry-Muffin_08304.webp" alt="Muffins" style="margin-top: 20px; border-radius: 10px; width: 80%; max-width: 600px;">
+        <img src="KABC_Quick-Breads_Blueberry-Muffin_08304.webp" alt="Muffins">
     </section>
 
-    <!-- Content Sections -->
     <section class="content">
         <div class="row">
-            <img src="CHOCOLATE-FUDGE-CAKE-24-S-11.jpg" height="400" width="250"    alt="Cake 1">
-            <div class="text">Our chocolate cakes are made with premium cocoa and rich ganache.</div>
+            <img src="CHOCOLATE-FUDGE-CAKE-24-S-11.jpg" alt="Cake 1">
+            <div class="text">Our **chocolate cakes** are made with premium cocoa and rich ganache, ensuring a deeply satisfying, decadent flavor in every bite.</div>
         </div>
         <div class="row reverse">
-            <div class="text">Taste the freshness of our fruit-based cakes made from real berries and cream.</div>
-            <img src="hq720.jpg"  alt="Cake 2">
+            <div class="text">Taste the **freshness of our fruit-based cakes** made from real berries and cream. They're light, airy, and perfect for a summer celebration.</div>
+            <img src="hq720.jpg" alt="Cake 2">
         </div>
     </section>
 
-    <!-- Special Offers Section -->
     <section class="welcome">
         <h2>🎉 Special Offers</h2>
-        <p>Get 10% off on all orders above ₹999. Free delivery for first-time customers. Subscribe to our newsletter and never miss a sweet deal!</p>
+        <p>Get **10% off** on all orders above ₹999. **Free delivery** for first-time customers. Subscribe to our newsletter and never miss a sweet deal!</p>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="welcome">
         <h2>💬 What Our Customers Say</h2>
-        <p>“The best red velvet cake I've ever had. Thank you for making my birthday extra special!” – Aisha R.</p>
-        <p>“Prompt delivery and amazing taste. I loved the presentation!” – Rahul M.</p>
+        <p>“The best red velvet cake I've ever had. Thank you for making my birthday extra special!” – **Aisha R.**</p>
+        <p>“Prompt delivery and amazing taste. I loved the presentation!” – **Rahul M.**</p>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Sweet Delights. All rights reserved.</p>
+        <p>&copy; 2025 Sweet Delights. All rights reserved. | Crafted with sweetness 💖</p>
     </footer>
 
 </body>
